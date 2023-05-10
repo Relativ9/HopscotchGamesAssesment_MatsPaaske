@@ -14,22 +14,11 @@ public class PrefabSpawner : MonoBehaviour
     public GameObject yellowInstance;
     public GameObject blueRocketPrefab;
     public GameObject redRocketPrefab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        newRocket.onClick.AddListener(respawnRocketOne);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void respawnRocketOne()
     {
         yellowInstance = Instantiate(yellowRocketPrefab, rocketSpots[0].transform.position, yellowRocketPrefab.transform.rotation);
-        //LaunchYellow.onClick.AddListener(linkButtonToPrefabYellow);
+        LaunchYellow.onClick.AddListener(linkButtonToPrefabYellow);
     }
 
     public void linkButtonToPrefabYellow()
