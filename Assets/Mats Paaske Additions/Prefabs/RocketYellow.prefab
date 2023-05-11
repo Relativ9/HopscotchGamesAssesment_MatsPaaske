@@ -4796,13 +4796,13 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 0
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 00010304020508
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -5123,21 +5123,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd456b17cc42b904dbb3d31f9a908372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
-  isDud: 0
-  inAir: 0
-  slowMoOn: 0
-  hasHit: 0
-  fuseBurningSound: {fileID: 0}
-  _ragdollActivator: {fileID: 0}
-  exhaust: {fileID: 3350140495074648674}
-  smoke: {fileID: 7707809068156294735}
-  rocketSwish: {fileID: 7707809066878578664}
-  target: {fileID: 0}
-  fuse: {fileID: 7365296700852661081}
   explosionStrength: 135
   upwardsThrust: 6
   rocketDrag: 0.1
+  speed: 16
+  isDud: 0
+  hasHit: 0
+  exhaust: {fileID: 3350140495074648674}
+  smoke: {fileID: 7707809068156294735}
+  rocketSwish: {fileID: 7707809066878578664}
+  fuse: {fileID: 7365296700852661081}
   explosionPrefab: {fileID: 7105351021353571666, guid: 614292e20cee683468f8b67c45029a05,
     type: 3}
 --- !u!54 &7707809066558948493

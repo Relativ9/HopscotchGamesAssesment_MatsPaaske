@@ -276,11 +276,12 @@ MonoBehaviour:
   rocketSwish: {fileID: 7443879106000263708}
   target: {fileID: 0}
   fuse: {fileID: 7443879107866659573}
-  explosionStrength: 135
+  explosionStrength: 500
   upwardsThrust: 350
   rocketDrag: 3
-  explosionPrefab: {fileID: 7105351021353571666, guid: 614292e20cee683468f8b67c45029a05,
+  explosionPrefab: {fileID: 7212347525738412510, guid: e4dfbab209c18514ba216f63981f6be5,
     type: 3}
+  camShake: {fileID: 0}
 --- !u!54 &7443879106048031737
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5257,7 +5258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7443879106782294370}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: -5.1700034, z: -0}
+  m_LocalPosition: {x: 0, y: -4.88, z: 0}
   m_LocalScale: {x: 0.66666645, y: 0.6666666, z: 0.66666645}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5347,7 +5348,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5893,7 +5894,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 0
+    angle: 20
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -5979,7 +5980,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.04
+      value: 0.05
       mode: 0
       spread: 0
       speed:
@@ -9993,7 +9994,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b26de6ead00af814db10f08d7285ec4b, type: 2}
+  - {fileID: 2100000, guid: 73988f043f368df428c36920ad8df407, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10018,7 +10019,7 @@ ParticleSystemRenderer:
   m_MeshDistribution: 0
   m_SortMode: 2
   m_MinParticleSize: 0
-  m_MaxParticleSize: 1
+  m_MaxParticleSize: 2
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -10028,13 +10029,13 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
-  m_UseCustomVertexStreams: 0
+  m_UseCustomVertexStreams: 1
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 0
   m_AllowRoll: 0
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_VertexStreams: 00010304
+  m_VertexStreams: 00010304020508
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}

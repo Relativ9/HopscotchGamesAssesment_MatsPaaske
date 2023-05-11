@@ -5,6 +5,8 @@ using UnityChan;
 
 public class RagdollActivator : MonoBehaviour
 {
+
+    //This script activates the ragdoll of the unity-chan prefab once it's hit by a rocket
     [SerializeField] private GameObject charRig;
 
     public bool isHit;
@@ -41,7 +43,7 @@ public class RagdollActivator : MonoBehaviour
         }
     }
 
-    void RagdollComponents()
+    void RagdollComponents()   //collects all the ragdolls and colliders the bones so they don't need manual assingment
     {
         rigCols = charRig.GetComponentsInChildren<Collider>();
         rigRbs = charRig.GetComponentsInChildren<Rigidbody>();
@@ -52,12 +54,12 @@ public class RagdollActivator : MonoBehaviour
         rigRbs[0].AddExplosionForce(forceStrenght, forceDirection, 4f, 0.6f);
         charAnim.enabled = false;
         randomWind.enabled = false;
-        foreach (Collider col in rigCols)
+        foreach (Collider col in rigCols) //cycles through each collider in the bones and turns on when ragdoll should activate
         {
             col.enabled = true;
         }
 
-        foreach (Rigidbody rbs in rigRbs)
+        foreach (Rigidbody rbs in rigRbs) //same as above but with rigidbodies, also sets the interpelation and collision detection to better track the movement at high speeds
         {
             rbs.isKinematic = false;
             rbs.interpolation = RigidbodyInterpolation.Interpolate;
@@ -67,7 +69,7 @@ public class RagdollActivator : MonoBehaviour
         this.GetComponent<Rigidbody>().isKinematic = true;
     }
 
-    void RagdollOff()
+    void RagdollOff() //Same as the ragdoll on method but in reverse
     {
         foreach (Collider col in rigCols)
         {
